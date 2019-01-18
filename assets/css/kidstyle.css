@@ -1,0 +1,17 @@
+body {
+    margin: 10px;
+    background-color: black;
+    background: url('../images/kidsback.jpg');
+    background-repeat: no-repeat;
+    background-image: fixed;
+    background-size: 100%;
+}
+
+
+
+.container{
+    margin: 0 auto;
+    padding: 40px;
+    width: 800px;
+    height: 500px;
+}
