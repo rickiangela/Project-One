@@ -118,3 +118,22 @@ form.example::after {
 #chatBottom{
     background: white;
 }
+
+.self{
+    background-color: aqua;
+    border-radius: 25px;
+    float: right;
+    text-align:center;
+    padding: 5px;
+    margin-left: 80px;
+
+}
+
+.notSelf{
+    background-color: lightgreen;
+    border-radius: 25px;
+    float: left;
+    text-align: center;
+    padding: 5px;
+    margin-right: 80px;
+}
