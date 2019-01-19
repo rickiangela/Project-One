@@ -47,14 +47,23 @@
           <h4>Parent Page</h4>
 
 
-          <!-- Parent Display Name class is change-display -->
+          <!-- Parent Display Name class is change-parent-name -->
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Parent Name</span>
             </div>
-            <input type="text" class="form-control change-display" placeholder="Display Name" aria-label="Display"
+            <input type="text" class="form-control change-parent name" placeholder="Parent Name" aria-label="Display"
               aria-describedby="basic-addon1" />
           </div>
+
+          <!-- forum display name class is display-name -->
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Display Name</span>
+              </div>
+              <input type="text" class="form-control change-display" placeholder="Display Name" aria-label="Display Name"
+                aria-describedby="basic-addon1" />
+            </div>
 
           <!-- Change email class is change-email -->
           <div class="input-group mb-3">
@@ -85,14 +94,15 @@
               aria-describedby="basic-addon1" />
           </div>
 
-          <!-- Changing the child age for age 0-5 the class is age-option-one and 6-10 is age-option-two -->
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Child's Age</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option class="age-option-one">0-5</option>
-              <option class="age-option-two">6-10</option>
-            </select>
-          </div>
+          <!-- Changing the child age class is change-age -->
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Child Age</span>
+              </div>
+              <input type="text" class="form-control change-age" placeholder="Child Age" aria-label="Child Age"
+                aria-describedby="basic-addon1" />
+            </div>
+
 
           <hr />
           <button type="button" class="btn btn-info">Save Changes</button>
