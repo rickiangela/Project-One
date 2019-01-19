@@ -23,17 +23,25 @@ $("#btn1").on("click", function (event) {
 
     var email = $("#InputParent1").val().trim()
     var password = $("#InputChild1").val().trim()
-
+    console.log(email + password)
 
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        // alert(errorMessage)
         console.log(errorCode);
         console.log(errorMessage);
-    }).then(function(){
-        $(".done").text("")
-        window.location.href = "account.html"
+    }).then(function () {
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+                $(".done").val("")
+                window.location.href = "account.html"
+            } else {
+                alert("You are not signed in. Please try again")
+            }
+        });
     });
 
 });
@@ -50,13 +58,13 @@ $("#newUserbtn").on("click", function (e) {
 
 
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(errorCode);
-            console.log(errorMessage);
-        }).then(function () {
-            firebase.auth().currentUser.updateProfile({
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+    }).then(function () {
+        firebase.auth().currentUser.updateProfile({
             displayName: displayName
         }).then(function () {
             console.log("It Works!")
@@ -74,9 +82,16 @@ $("#newUserbtn").on("click", function (e) {
                 childAge: childAge,
                 displayName: displayName,
                 email: email
-        }).then(function(){
-            $(".done").text("")
-            window.location.href = "account.html"
+            }).then(function () {
+                firebase.auth().onAuthStateChanged(function (user) {
+                    if (user) {
+                        // User is signed in.
+                        $(".done").val("")
+                        window.location.href = "account.html"
+                    } else {
+
+                    }
+                });
             });
         });
     });
