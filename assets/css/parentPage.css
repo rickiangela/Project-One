@@ -1,0 +1,139 @@
+body{
+    background-color: #003259;
+}
+#search-bar{
+    margin-top: 10px;
+}
+
+#articles{
+    margin-top: 20px;
+}
+
+#header-picture {
+    float: left;
+}
+
+.fa-child{
+    float: right;
+    margin-top:5px;
+}
+#logo{
+    width:300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+form.example button:hover {
+    background: #0b7dda;
+  }
+  
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+
+
+
+  /* chat box */
+  *{
+	font-family: 'Open Sans';
+	box-sizing: border-box;
+}
+
+#chatContainer{
+	width: 400px;
+	height: 500px;
+    border: 2px solid #ddd;
+    margin-top: 20px;
+}
+
+#chatContainer > #chatHeader{
+	width: 100%;
+	background-color: #fff;
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+#chatContainer > #chatHeader h3{
+	margin: 0px;
+	padding:0px;
+
+	font-weight: 400px;
+	color: #333;
+}
+
+#chatContainer > #chatMessage{
+	height: 420px;
+	border-bottom: 1px solid #dddddd;
+    overflow-y: scroll;
+    background: white;
+}
+
+#chatContainer > #chatBottom form input[type='submit']{
+	padding: 6px;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	cursor: pointer;
+}
+
+#chatContainer > #chatBottom form input[type='text']{
+	width: 80%;
+	padding: 3px;
+	padding-left: 10px;
+	border:1px solid #dddddd;
+	border-radius: 5px;
+	margin: 5px;
+    height: 30px;
+}
+.chatmsg{
+	list-style: none;
+	border-bottom: 1px solid #dddddd;
+	padding: 5px;
+}
+#chatBottom{
+    background: white;
+}
+
+.self{
+    background-color: aqua;
+    border-radius: 25px;
+    float: right;
+    text-align:center;
+    padding: 5px;
+    margin-left: 80px;
+
+}
+
+.notSelf{
+    background-color: lightgreen;
+    border-radius: 25px;
+    float: left;
+    text-align: center;
+    padding: 5px;
+    margin-right: 80px;
+}
