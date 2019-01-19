@@ -1,0 +1,27 @@
+body{
+    background-color: #003259;
+}
+
+.settings-box{
+    margin-top: 10px;
+    background-color: white;
+    border-style: solid;
+    padding: 10px;
+}
+
+.btn-info{
+    float: right;
+}
+
+.buttons{
+    margin-top: 5px;
+}
+
+h4{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#logo{
+    margin-top: 5px;
+}
