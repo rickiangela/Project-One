@@ -29,7 +29,7 @@ $("#btn1").on("click", function (event) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        // alert(errorMessage)
+        alert(errorMessage)
         console.log(errorCode);
         console.log(errorMessage);
     }).then(function () {
@@ -39,7 +39,7 @@ $("#btn1").on("click", function (event) {
                 $(".done").val("")
                 window.location.href = "account.html"
             } else {
-                alert("You are not signed in. Please try again")
+                
             }
         });
     });
@@ -61,6 +61,7 @@ $("#newUserbtn").on("click", function (e) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        alert(errorMessage)
         console.log(errorCode);
         console.log(errorMessage);
     }).then(function () {
@@ -71,6 +72,7 @@ $("#newUserbtn").on("click", function (e) {
         }).catch(function (error) {
             var errorCode = error.code;
             var errorMessage = error.message;
+            alert(errorMessage)
             console.log(errorCode);
             console.log(errorMessage);
         }).then(function (userId) {
