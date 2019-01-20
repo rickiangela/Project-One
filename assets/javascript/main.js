@@ -17,19 +17,35 @@ var childName = "";
 var childAge = "";
 var displayName = "";
 
+firebase.auth().onAuthStateChanged(function(user){
+    if (user){
+        window.location.href = "account.html";
+    };
+});
+
 $("#btn1").on("click", function (event) {
 
     event.preventDefault();
 
-    var email = $("#InputParent1").val().trim()
-    var password = $("#InputChild1").val().trim()
-    console.log(email + password)
+    var email = $("#InputParent1").val().trim();
+    var password = $("#InputChild1").val().trim();
+    console.log(email + password);
 
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+    .then(function() {
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+                 // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert(errorMessage);
+                console.log(errorCode);
+                console.log(errorMessage);
+        });
+    }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        alert(errorMessage)
+        alert(errorMessage);
         console.log(errorCode);
         console.log(errorMessage);
     }).then(function () {
@@ -38,12 +54,9 @@ $("#btn1").on("click", function (event) {
                 // User is signed in.
                 $(".done").val("")
                 window.location.href = "account.html"
-            } else {
-                
-            }
+            };
         });
     });
-
 });
 
 $("#newUserbtn").on("click", function (e) {
@@ -56,34 +69,26 @@ $("#newUserbtn").on("click", function (e) {
     var email = $("#InputEmail1").val().trim();
     var password = $("#InputPassword1").val().trim();
 
-
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert(errorMessage)
-        console.log(errorCode);
-        console.log(errorMessage);
-    }).then(function () {
-        firebase.auth().currentUser.updateProfile({
-            displayName: displayName
-        }).then(function () {
-            console.log("It Works!")
-        }).catch(function (error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            alert(errorMessage)
-            console.log(errorCode);
-            console.log(errorMessage);
-        }).then(function (userId) {
-            var userId = firebase.auth().currentUser;
-            console.log(userId)
-            firebase.database().ref("users/" + userId.uid).set({
-                parentName: parentName,
-                childName: childName,
-                childAge: childAge,
-                displayName: displayName,
-                email: email
+    if ($("#inputName").val().trim() != "" && $("#inputChild").val().trim() != "" && $("#inputAge").val().trim() != "" && $("#displayName1").val().trim() != "" && $("#InputEmail1").val().trim() != "" && $("#InputPassword1").val().trim() != ""){
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+        .then(function() {
+            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert(errorMessage)
+                console.log(errorCode);
+                console.log(errorMessage);
+            }).then(function (userId) {
+                    var userId = firebase.auth().currentUser;
+                    console.log(userId)
+                    firebase.database().ref("users/" + userId.uid).set({
+                        parentName: parentName,
+                        childName: childName,
+                        childAge: childAge,
+                        displayName: displayName,
+                        timeLimit: "0"
+                    });
             }).then(function () {
                 firebase.auth().onAuthStateChanged(function (user) {
                     if (user) {
@@ -95,7 +100,16 @@ $("#newUserbtn").on("click", function (e) {
                     }
                 });
             });
-        });
-    });
+        }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert(errorMessage)
+            console.log(errorCode);
+            console.log(errorMessage);
+        });   
+    }else{
+        alert("Please fill in all fields.")
+    }
 });
 

@@ -23,76 +23,70 @@
 <body>
     <div class="fluid-container">
         <div class="row3">
-            <div class="col-sm-4" id="profile1">
+            <div class="col-sm-4 littleChildDiv" id="profile1">
                 <div class="name" id="child1">
-                    <h2><strong>Child 2's Name</strong></h2>
+                    <h2 id="littlechild"><strong>Child 2's Name</strong></h2>
                 </div>
-                <a href="kidspage.html"><button><img src="assets/images/blippi.png" width="150px" height="150px"></button></a>
+                <a href="kidspage.html"><img src="assets/images/blippi.png" width="150px" height="150px"></a>
                 <br>
                 <br>
                 <div class="row4">
                     <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Set Timer
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">No Timer Set</a>
-                            <a class="dropdown-item" href="#">5 Minutes</a>
-                            <a class="dropdown-item" href="#">10 Minutes</a>
-                            <a class="dropdown-item" href="#">15 Minutes</a>
-                            <a class="dropdown-item" href="#">20 Minutes</a>
-                            <a class="dropdown-item" href="#">25 Minutes</a>
-                            <a class="dropdown-item" href="#">30 Minutes</a>
-                            <a class="dropdown-item" href="#">35 Minutes</a>
-                            <a class="dropdown-item" href="#">40 Minutes</a>
-                            <a class="dropdown-item" href="#">45 Minutes</a>
-                            <a class="dropdown-item" href="#">50 Minutes</a>
-                            <a class="dropdown-item" href="#">55 Minutes</a>
-                            <a class="dropdown-item" href="#">1 Hour</a>
-                        </div>
+                        <select class="form-select timePicked">
+                            <option class="dropdown-item">Time Limit</option>
+                            <option class="dropdown-item" value="0">No Time Limit</option>
+                            <option class="dropdown-item" val="5">5 Minutes</option>
+                            <option class="dropdown-item" val="10">10 Minutes</option>
+                            <option class="dropdown-item" val="15">15 Minutes</option>
+                            <option class="dropdown-item" val="20">20 Minutes</option>
+                            <option class="dropdown-item" val="25">25 Minutes</option>
+                            <option class="dropdown-item" val="30">30 Minutes</option>
+                            <option class="dropdown-item" val="35">35 Minutes</option>
+                            <option class="dropdown-item" val="40">40 Minutes</option>
+                            <option class="dropdown-item" val="45">45 Minutes</option>
+                            <option class="dropdown-item" val="50">50 Minutes</option>
+                            <option class="dropdown-item" val="55">55 Minutes</option>
+                            <option class="dropdown-item" val="60">60 Minutes</option>
+                        </select>
                     </div>
                 </div>
 
             </div>
 
-            <div class="col-sm-4" id="profile1">
+            <div class="col-sm-4 bigChildDiv" id="profile1">
                 <div class="name" id="child2">
-                    <h2><strong>Child 1's Name</strong></h2>
+                    <h2 id="bigchild"><strong>Child 1's Name</strong></h2>
                 </div>
-                <a href="kidspage2.html"><button><img src="assets/images/kid.png" width="150px" height="150px"></button></a>
+                <a href="kidspage2.html"><img src="assets/images/kid.png" width="150px" height="150px"></a>
                 <br>
                 <br>
                 <div class="row4">
                     <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Set Timer
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">No Timer Set</a>
-                            <a class="dropdown-item" href="#">5 Minutes</a>
-                            <a class="dropdown-item" href="#">10 Minutes</a>
-                            <a class="dropdown-item" href="#">15 Minutes</a>
-                            <a class="dropdown-item" href="#">20 Minutes</a>
-                            <a class="dropdown-item" href="#">25 Minutes</a>
-                            <a class="dropdown-item" href="#">30 Minutes</a>
-                            <a class="dropdown-item" href="#">35 Minutes</a>
-                            <a class="dropdown-item" href="#">40 Minutes</a>
-                            <a class="dropdown-item" href="#">45 Minutes</a>
-                            <a class="dropdown-item" href="#">50 Minutes</a>
-                            <a class="dropdown-item" href="#">55 Minutes</a>
-                            <a class="dropdown-item" href="#">1 Hour</a>
-                        </div>
+                        <select class="form-select timePicked" aria-labelledby="dropdownMenuButton">
+                            <option class="dropdown-item">Time Limit</option>
+                            <option class="dropdown-item" value="0">No Time Limit</option>
+                            <option class="dropdown-item" value="5">5 Minutes</option>
+                            <option class="dropdown-item" value="10">10 Minutes</option>
+                            <option class="dropdown-item" value="15">15 Minutes</option>
+                            <option class="dropdown-item" value="20">20 Minutes</option>
+                            <option class="dropdown-item" value="25">25 Minutes</option>
+                            <option class="dropdown-item" value="30">30 Minutes</option>
+                            <option class="dropdown-item" value="35">35 Minutes</option>
+                            <option class="dropdown-item" value="40">40 Minutes</option>
+                            <option class="dropdown-item" value="45">45 Minutes</option>
+                            <option class="dropdown-item" value="50">50 Minutes</option>
+                            <option class="dropdown-item" value="55">55 Minutes</option>
+                            <option class="dropdown-item" value="60">60 Minutes</option>
+                        </select>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-4" id="profile1">
+            <div class="col-sm-4 parentDiv" id="profile1">
                 <div class="name" id="parentName">
-                    <h2><strong>Parent's Name</strong></h2>
+                    <h2 id="parents"><strong>Parent's Name</strong></h2>
                 </div>
-                <a href="parentPage.html"><button><img src="assets/images/parent.png" width="150px" height="150px"></button></a>
+                <a href="parentPage.html"><img src="assets/images/parent.png" width="150px" height="150px"></a>
             </div>
         </div>
     </div>
@@ -100,8 +94,8 @@
 
     
 
-
-    <script type="text/javascript" src="assets/javascript/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script type="text/javascript" src="assets/javascript/account.js"></script>
 </body>
 
 </html>
