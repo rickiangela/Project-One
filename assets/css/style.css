@@ -7,6 +7,11 @@ body {
     background-size: 100%;
 }
 
+/* index page */
+.row{
+    margin: auto;
+}
+
 .nav-link {
     border: none;
     color: white;
@@ -17,6 +22,10 @@ body {
     padding: 0;
 }
 
+#login {
+    float: left;
+    width: 200px;
+} 
 
 .btn {
     border: solid 1px black;
@@ -35,7 +44,7 @@ body {
     opacity:0.9;
     background-color:white;
     width: 200px;
-    height: 400px;
+    height: 450px;
     border: solid 1px black;
 }
 
@@ -46,17 +55,11 @@ body {
 }
 
 
-.row3 button {
+button {
     float: right;
     background: transparent;
     border: 0;
     margin: 0 auto;
-}
-
-
-.row4 {
-    margin-right: 40px;
-    padding: 0;
 }
 
 #profile1{
