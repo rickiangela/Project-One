@@ -31,9 +31,10 @@
 
         <!-- home button class is home-button and child page button class is child-button -->
         <div class="col-lg-3">
-          <a href="parentPage.html"><i class="fas fa-home fa-3x home-button btn"></i></a>
-          <a href=""><i class="fas fa-child fa-3x child-button btn"></i></a>
-          <a href="index.html"><i class="fas fa-sign-out-alt fa-3x sign-out"></i></a>
+          <i class="fas fa-home fa-3x home-button btn"></i>
+          <i class="fas fa-child fa-3x child-button btn"></i>
+          <i class="fas fa-sign-out-alt fa-3x sign-out"></i>
+
         </div>
       </div>
 
@@ -48,65 +49,43 @@
           <h4>Parent Page</h4>
 
 
-          <!-- Parent Display Name class is change-parent-name -->
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Parent Name</span>
-            </div>
-            <input type="text" class="form-control change-parent name" placeholder="Parent Name" aria-label="Display"
-              aria-describedby="basic-addon1" />
-          </div>
-
-          <!-- forum display name class is display-name -->
-          <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Display Name</span>
-              </div>
-              <input type="text" class="form-control change-display" placeholder="Display Name" aria-label="Display Name"
-                aria-describedby="basic-addon1" />
-            </div>
-
           <!-- Change email class is change-email -->
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Email</span>
+              <span class="input-group-text" id="basic-addon1">Change Email</span>
             </div>
-            <input type="text" class="form-control change-email" placeholder="Email" aria-label="Email"
+
+            <input type="text" class="form-control change-email" id="email" placeholder="Email" aria-label="Email"
+
               aria-describedby="basic-addon1" />
           </div>
 
           <!-- Changing password class is change-password -->
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Password</span>
+              <span class="input-group-text" id="basic-addon1">Set New Password</span>
             </div>
-            <input type="text" class="form-control change-password" placeholder="Password" aria-label="Password"
+
+            <input type="text" class="form-control change-password" id="password" placeholder="New Password" aria-label="Password"
+
               aria-describedby="basic-addon1" />
           </div>
 
-          <h4>Child Page</h4>
-
-          <!-- changing the child's name class is change-child-name -->
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Child Name</span>
-            </div>
-            <input type="text" class="form-control change-child-name" placeholder="Child Name" aria-label="Child Name"
-              aria-describedby="basic-addon1" />
-          </div>
+          <h4>Child</h4>
 
           <!-- Changing the child age class is change-age -->
           <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Child Age</span>
               </div>
-              <input type="text" class="form-control change-age" placeholder="Child Age" aria-label="Child Age"
+              <input type="text" class="form-control change-age" id="childAge" placeholder="Child Age" aria-label="Child Age"
                 aria-describedby="basic-addon1" />
             </div>
 
 
+
           <hr />
-          <button type="button" class="btn btn-info">Save Changes</button>
+          <button type="button" class="btn btn-info" id="updateInfo">Save Changes</button>
         </div>
 
         <div class="col-lg-3"></div>
@@ -116,12 +95,13 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="assets/javascript/settings.js"></script>
+
 </body>
 
 </html>
