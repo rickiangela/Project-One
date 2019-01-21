@@ -1,20 +1,32 @@
 body{
-    background-color: #003259;
+    background-color: #6AA8B1;
 }
 
 .settings-box{
-    margin-top: 10px;
+    margin-top: 30px;
     background-color: white;
     border-style: solid;
-    padding: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
 }
 
 .btn-info{
     float: right;
 }
 
-.buttons{
+.home-button{
     margin-top: 5px;
+    float: right;
+    background-color: #6AA8B1;
+}
+
+.child-button {
+    margin-top: 5px;
+    float: right;
+    background-color: #6AA8B1;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5px;
 }
 
 h4{
@@ -25,3 +37,22 @@ h4{
 #logo{
     margin-top: 5px;
 }
+
+.heading{
+    background-color: white;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  #content-wrap {
+    padding-bottom: 2.5rem;
+  }
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: white;
+  }

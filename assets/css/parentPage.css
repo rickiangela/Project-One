@@ -26,6 +26,7 @@ body{
     margin-right: auto 
 }
 
+/* search */
 form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
@@ -58,14 +59,11 @@ form.example::after {
   }
   /* chat box */
 
-  *{
-	font-family: 'Open Sans';
-	box-sizing: border-box;
-}
-
 #chatContainer{
 	width: 400px;
-	height: 500px;
+    height: 508px;
+    font-family: 'Open Sans';
+	box-sizing: border-box;
     border: 2px solid #ddd;
     margin-top: 20px;
 }
@@ -135,3 +133,18 @@ form.example::after {
     padding: 5px;
     margin-right: 80px;
 }
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  #content-wrap {
+    padding-bottom: 2.5rem;
+  }
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: white;
+  }
