@@ -7,42 +7,16 @@ body {
     background-size: 100%;
 }
 
-/* index page */
-/* .row1 {
-    margin-bottom: 20px;
-    background-color: transparent;
-} */
-
-/* .row{
-    margin: auto;
-} */
-
 .nav-link {
     border: none;
     color: white;
 }
-
-/* #InputParent1{
-    width: 175px;
-}
-
-#InputChild1{
-    width: 175px;
-}
-
-#InputChildAge{
-    width: 110px;
-} */
 
 .col-auto {
     margin: 0;
     padding: 0;
 }
 
-/* #login {
-    float: left;
-    width: 200px;
-} */
 
 .btn {
     border: solid 1px black;
