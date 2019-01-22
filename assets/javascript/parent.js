@@ -11,14 +11,57 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
+var displayName = "";
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      // User is signed in.
+        var userId = firebase.auth().currentUser.uid;
+
+        return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+            displayName = snapshot.val().displayName;
+        })
     } else {
         window.location.href = "index.html";
     }
+   
+})
+
+database.ref("/chat").on("child_added", function (childInfo){
+    console.log(childInfo.val());
+    var userName = localStorage.getItem("displayName")
+    var chatName = childInfo.val().displayName;
+    var message = childInfo.val().message;
+    
+    if (chatName == userName){
+        var p = $("<p>").text(chatName + " Says: " + message)
+        p.addClass("self")
+        $("#chatMessage").append(p)
+    }else{
+        var p = $("<p>").text(chatName + " Says: " + message)
+        p.addClass("notSelf")
+        $("#chatMessage").append(p)
+    }; 
 });
+
+$("#chatSend").on("click", function(e){
+    e.preventDefault();
+    
+    var message = $("#text").val().trim();
+
+    if ( message === ""){
+        alert("Please write a message!")
+    }else{
+        database.ref("/chat").push({
+            message: message,
+            displayName: displayName,
+            dateAdded : firebase.database.ServerValue.TIMESTAMP
+        });
+        
+        $("#text").val("");
+    }
+});
+
+
 
 function openArticles(){
 
@@ -127,6 +170,8 @@ $("#searchEnter").on("click",function (event){
     });
     
 });
+
+
 
 $(".child-button").on("click", function(){
     window.location.href = "account.html";
