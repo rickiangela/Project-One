@@ -1,10 +1,13 @@
 body{
-    background-color: #003259;
+    background-color: #6AA8B1;
 }
 #search-bar{
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
+.top{
+    background-color: white;
+}
 #articles{
     margin-top: 20px;
 }
@@ -12,18 +15,43 @@ body{
 #logo {
     float: left;
     margin-top: 5px;
-}
-
-.fa-child{
-    float: right;
-    margin-top:5px;
-}
-#logo{
     width:300px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto 
+}
+.settings-page{
+    margin: 5px;
+    float: right;
+    background-color: #6AA8B1;
+    padding: 5px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sign-out {
+    margin: 5px;
+    float: right;
+    background-color: #6AA8B1;
+    padding: 5px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.child-button {
+    margin: 5px;
+    float: right;
+    background-color: #6AA8B1;
+    padding: 5px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* search */
@@ -60,7 +88,7 @@ form.example::after {
   /* chat box */
 
 #chatContainer{
-	width: 400px;
+    width: 400px; 
     height: 508px;
     font-family: 'Open Sans';
 	box-sizing: border-box;
@@ -146,5 +174,9 @@ form.example::after {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-    background-color: white;
+  }
+  
+  #chatContainer{
+      float: right;
+      margin-left: 60px;
   }
