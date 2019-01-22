@@ -71,4 +71,236 @@ function decrement(){
     }
 }
 
+// ========================== 0-5 Video Requests and Appends ========================
+// On load to sync api and broswer loading
+window.onload = function video() {
+    // Sets initial query to first slide in carosel
+    var qSearch = "blippi"
 
+    // API get is being set
+    gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
+    // Here is the request being made by terms and allows safeSearch
+    var restRequest = gapi.client.request({
+        'path': 'youtube/v3/search',
+        'params': {
+            'q': qSearch,
+            'part': 'snippet',
+            'safeSearch': 'strict'
+        }
+    });
+
+    // console.log(restRequest);
+    // Response return
+    restRequest.execute(function (resp) {
+        console.log(resp);
+        // For loop to grab items and append to the page
+        for (i in resp.items) {
+            $('.container2').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+        }
+    });
+        
+    // On click set-up for user interaction
+    $("img").on("click", function () {
+        // event.preventDefault();
+        // console.log("Working");
+        // Clears container of current videos
+        $('.container2').empty();
+        // Sets the search term to the value of the current item clicked
+        qSearch = $(this).attr("value");
+        // console.log(this);
+        // console.log(qSearch);
+        // This will rerun the request to the API
+        gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
+        restRequest = gapi.client.request({
+            'path': 'youtube/v3/search',
+            'params': {
+                'q': qSearch,
+                'part': 'snippet',
+                'safeSearch': 'strict'
+            }
+        });
+        // Returns the request back and will run the same loop to append items to page
+        restRequest.execute(function (resp) {
+            // console.log(resp);
+            for (i in resp.items) {  
+                $('.container2').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+            }
+        });
+    });
+}
+
+$("#littleSearchbtn").on("click", function (event){
+    event.preventDefault();
+    // Sets initial query to first slide in carosel
+    
+    var qSearch = $("#littleSearch").val().trim();
+
+    console.log(qSearch)
+    // API get is being set
+    gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
+    // Here is the request being made by terms and allows safeSearch
+    var restRequest = gapi.client.request({
+        'path': 'youtube/v3/search',
+        'params': {
+            'q': qSearch,
+            'part': 'snippet',
+            'safeSearch': 'strict'
+        }
+    });
+
+    // console.log(restRequest);
+    // Response return
+    restRequest.execute(function (resp) {
+        console.log(resp);
+        // For loop to grab items and append to the page
+        for (i in resp.items) {
+            $('.container2').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+        }
+    });
+        
+    // On click set-up for user interaction
+    $("img").on("click", function () {
+        // event.preventDefault();
+        // console.log("Working");
+        // Clears container of current videos
+        $('.container2').empty();
+        // Sets the search term to the value of the current item clicked
+        qSearch = $(this).attr("value");
+        // console.log(this);
+        // console.log(qSearch);
+        // This will rerun the request to the API
+        gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
+        restRequest = gapi.client.request({
+            'path': 'youtube/v3/search',
+            'params': {
+                'q': qSearch,
+                'part': 'snippet',
+                'safeSearch': 'strict'
+            }
+        });
+        // Returns the request back and will run the same loop to append items to page
+        restRequest.execute(function (resp) {
+            // console.log(resp);
+            for (i in resp.items) {  
+                $('.container2').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+            }
+        });
+    });
+});
+
+// ========================== 6-10 Video Requests and Appends ========================
+// On load to sync api and broswer loading
+window.onload = function video() {
+    // Sets initial query to first slide in carosel
+    var qSearch2 = "kim possible"
+
+    // API get is being set
+    gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
+    // Here is the request being made by terms and allows safeSearch
+    var restRequest2 = gapi.client.request({
+        'path': 'youtube/v3/search',
+        'params': {
+            'q': qSearch2,
+            'part': 'snippet',
+            'safeSearch': 'strict'
+        }
+    });
+
+    // console.log(restRequest);
+    // Response return
+    restRequest2.execute(function (resp) {
+        console.log(resp);
+        // For loop to grab items and append to the page
+        for (i in resp.items) {
+            $('.container3').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+        }
+    });
+        
+    // On click set-up for user interaction
+    $("img").on("click", function () {
+        // event.preventDefault();
+        // console.log("Working");
+        // Clears container of current videos
+        $('.container3').empty();
+        // Sets the search term to the value of the current item clicked
+        qSearch2 = $(this).attr("value");
+        // console.log(this);
+        // console.log(qSearch);
+        // This will rerun the request to the API
+        gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
+        restRequest2 = gapi.client.request({
+            'path': 'youtube/v3/search',
+            'params': {
+                'q': qSearch2,
+                'part': 'snippet',
+                'safeSearch': 'strict'
+            }
+        });
+        // Returns the request back and will run the same loop to append items to page
+        restRequest2.execute(function (resp) {
+            // console.log(resp);
+            for (i in resp.items) {  
+                $(".container3").append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+            }
+        });
+    });
+}
+
+$("#bigSearchbtn").on("click", function (event){
+    event.preventDefault();
+    // Sets initial query to first slide in carosel
+    $('.container3').empty()
+    var qSearch = $("#bigSearch").val().trim();
+
+    console.log(qSearch)
+    // API get is being set
+    gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
+    // Here is the request being made by terms and allows safeSearch
+    var restRequest = gapi.client.request({
+        'path': 'youtube/v3/search',
+        'params': {
+            'q': qSearch,
+            'part': 'snippet',
+            'safeSearch': 'strict'
+        }
+    });
+
+    // console.log(restRequest);
+    // Response return
+    restRequest.execute(function (resp) {
+        console.log(resp);
+        // For loop to grab items and append to the page
+        for (i in resp.items) {
+            $('.container3').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+        }
+    });
+        
+    // On click set-up for user interaction
+    $("img").on("click", function () {
+        // event.preventDefault();
+        // console.log("Working");
+        // Clears container of current videos
+        $('.container3').empty();
+        // Sets the search term to the value of the current item clicked
+        qSearch = $(this).attr("value");
+        // console.log(this);
+        // console.log(qSearch);
+        // This will rerun the request to the API
+        gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
+        restRequest = gapi.client.request({
+            'path': 'youtube/v3/search',
+            'params': {
+                'q': qSearch,
+                'part': 'snippet',
+                'safeSearch': 'strict'
+            }
+        });
+        // Returns the request back and will run the same loop to append items to page
+        restRequest.execute(function (resp) {
+            // console.log(resp);
+            for (i in resp.items) {  
+                $('.container3').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+            }
+        });
+    });
+});
