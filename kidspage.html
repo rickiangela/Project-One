@@ -26,19 +26,19 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active" id="blippi">
-                    <img class="d-block w-100" src="assets/images/blippi2.jpg" alt="First slide">
+                    <img class="d-block w-100" src="assets/images/blippi2.jpg" value="blippi" alt="First slide">
                 </div>
 
                 <div class="carousel-item" id="mickey">
-                    <img class="d-block w-100" src="assets/images/mickey2.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="assets/images/mickey2.jpg" value="mickey mouse" alt="Second slide">
                 </div>
 
                 <div class="carousel-item" id="thomas">
-                    <img class="d-block w-100" src="assets/images/thomas.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="assets/images/thomas.jpg" value="thomas the tank engine" alt="Third slide">
                 </div>
 
                 <div class="carousel-item" id="pjmasks">
-                    <img class="d-block w-100" src="assets/images/pj-masks.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="assets/images/pj-masks.jpg" value="pj mask" alt="Third slide">
                 </div>
             </div>
         </div>
@@ -46,8 +46,8 @@
         <div class="kidSearch" id="search">
             <br>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" id="littleSearch" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" id="littleSearchbtn" type="submit">Search</button>
             </form>
         </div>
 
@@ -59,7 +59,8 @@
     <div class="container2">
         
     </div>
-
+    
+    <script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
     <script type="text/javascript" src="assets/javascript/kidsJS.js"></script>
 </body>
