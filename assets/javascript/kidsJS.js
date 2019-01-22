@@ -132,7 +132,7 @@ window.onload = function video() {
 $("#littleSearchbtn").on("click", function (event){
     event.preventDefault();
     // Sets initial query to first slide in carosel
-    
+    $('.container2').empty()
     var qSearch = $("#littleSearch").val().trim();
 
     console.log(qSearch)
