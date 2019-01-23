@@ -1,4 +1,3 @@
-// Initialize Firebase
 var config = {
     apiKey: "AIzaSyD2x5ejtvQv8l5fMdsenPXuxIMbiiWDay0",
     authDomain: "project-one-34b56.firebaseapp.com",
@@ -70,31 +69,33 @@ function decrement(){
         });
     }
 }
-// ========================== 6-10 Video Requests and Appends ========================
+
+// ========================== 0-5 Video Requests and Appends ========================
 // On load to sync api and broswer loading
 window.onload = function video() {
+    console.log("hi")
     // Sets initial query to first slide in carosel
-    var qSearch2 = "kim possible"
+    var qSearch = "blippi"
 
     // API get is being set
     gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
     // Here is the request being made by terms and allows safeSearch
-    var restRequest2 = gapi.client.request({
+    var restRequest = gapi.client.request({
         'path': 'youtube/v3/search',
         'params': {
-            'q': qSearch2,
+            'q': qSearch,
             'part': 'snippet',
             'safeSearch': 'strict'
         }
     });
-
+    
     // console.log(restRequest);
     // Response return
-    restRequest2.execute(function (resp) {
+    restRequest.execute(function (resp) {
         console.log(resp);
         // For loop to grab items and append to the page
         for (i in resp.items) {
-            $('.container3').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+            $('.container2').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
         }
     });
         
@@ -103,36 +104,36 @@ window.onload = function video() {
         // event.preventDefault();
         // console.log("Working");
         // Clears container of current videos
-        $('.container3').empty();
+        $('.container2').empty();
         // Sets the search term to the value of the current item clicked
-        qSearch2 = $(this).attr("value");
+        qSearch = $(this).attr("value");
         // console.log(this);
         // console.log(qSearch);
         // This will rerun the request to the API
         gapi.client.setApiKey('AIzaSyDQ3VgLYjf0HR-CCHFPmAvWwk2e4ENK-M0');
-        restRequest2 = gapi.client.request({
+        restRequest = gapi.client.request({
             'path': 'youtube/v3/search',
             'params': {
-                'q': qSearch2,
+                'q': qSearch,
                 'part': 'snippet',
                 'safeSearch': 'strict'
             }
         });
         // Returns the request back and will run the same loop to append items to page
-        restRequest2.execute(function (resp) {
-            // console.log(resp);
+        restRequest.execute(function (resp) {
+            
             for (i in resp.items) {  
-                $(".container3").append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+                $('.container2').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
             }
         });
     });
 }
 
-$("#bigSearchbtn").on("click", function (event){
+$("#littleSearchbtn").on("click", function (event){
     event.preventDefault();
     // Sets initial query to first slide in carosel
-    $('.container3').empty()
-    var qSearch = $("#bigSearch").val().trim();
+    $('.container2').empty()
+    var qSearch = $("#littleSearch").val().trim();
 
     console.log(qSearch)
     // API get is being set
@@ -153,7 +154,7 @@ $("#bigSearchbtn").on("click", function (event){
         console.log(resp);
         // For loop to grab items and append to the page
         for (i in resp.items) {
-            $('.container3').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+            $('.container2').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
         }
     });
         
@@ -162,7 +163,7 @@ $("#bigSearchbtn").on("click", function (event){
         // event.preventDefault();
         // console.log("Working");
         // Clears container of current videos
-        $('.container3').empty();
+        $('.container2').empty();
         // Sets the search term to the value of the current item clicked
         qSearch = $(this).attr("value");
         // console.log(this);
@@ -181,7 +182,7 @@ $("#bigSearchbtn").on("click", function (event){
         restRequest.execute(function (resp) {
             // console.log(resp);
             for (i in resp.items) {  
-                $('.container3').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+                $('.container2').append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
             }
         });
     });
