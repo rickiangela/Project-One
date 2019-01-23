@@ -96,7 +96,7 @@ window.onload = function video() {
         for (i in resp.items) {
             div = ("<div>")
                 div.addClass("m-2")
-                div.append("<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>");
+                div.append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
                 $(".container3").append(div);
         }
     });
@@ -127,7 +127,7 @@ window.onload = function video() {
             for (i in resp.items) {  
                 div = ("<div>")
                 div.addClass("m-2")
-                div.append("<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>");
+                div.append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
                 $(".container3").append(div);
             }
         });
@@ -160,8 +160,8 @@ $("#bigSearchbtn").on("click", function (event){
         // For loop to grab items and append to the page
         for (i in resp.items) {
             div = ("<div>")
-                div.addClass("m-2")
-                div.append("<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>");
+               div.addClass("m-2")
+                div.append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
                 $(".container3").append(div);
         }
     });
@@ -192,7 +192,7 @@ $("#bigSearchbtn").on("click", function (event){
             for (i in resp.items) {  
                 div = ("<div>")
                 div.addClass("m-2")
-                div.append("<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>");
+                div.append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
                 $(".container3").append(div);
             }
         });
