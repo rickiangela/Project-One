@@ -122,7 +122,10 @@ window.onload = function video() {
         restRequest2.execute(function (resp) {
             // console.log(resp);
             for (i in resp.items) {  
-                $(".container3").append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
+                div = ("<div>")
+                div.addClass("m-2")
+                div.html("<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>");
+                $(".container3").append(div);
             }
         });
     });
