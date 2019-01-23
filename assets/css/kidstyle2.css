@@ -3,15 +3,14 @@ body {
     background-color: black;
     background: url('../images/kidsback2.jpg');
     background-repeat: no-repeat;
-    background-image: fixed;
+    background-attachment: fixed;
     background-size: 100%;
 }
 
 
 
-.container{
-    margin: 0 auto;
-    padding: 40px;
+.container3{
+    margin: 20px auto;
     width: 800px;
     height: 500px;
 }
