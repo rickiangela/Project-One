@@ -7,9 +7,9 @@ body {
     background-size: 100%;
 }
 
-.container2{
+.container{
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     width: 800px;
     height: 500px;
 }
