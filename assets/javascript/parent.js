@@ -33,11 +33,11 @@ database.ref("/chat").on("child_added", function (childInfo){
     var message = childInfo.val().message;
     
     if (chatName == userName){
-        var p = $("<p>").text(chatName + " Says: " + message)
+        var p = $("<p>").text(chatName + " says: " + message)
         p.addClass("self")
         $("#chatMessage").append(p)
     }else{
-        var p = $("<p>").text(chatName + " Says: " + message)
+        var p = $("<p>").text(chatName + " says: " + message)
         p.addClass("notSelf")
         $("#chatMessage").append(p)
     }; 
