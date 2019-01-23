@@ -23,8 +23,8 @@ firebase.auth().onAuthStateChanged(function(user){
             var parentName1 = snapshot.val().parentName;
             var childName1 = snapshot.val().childName;
             var displayName = snapshot.val().displayName;
-            sessionStorage.clear();
-            sessionStorage.setItem("displayName", displayName);
+            localStorage.clear();
+            localStorage.setItem("displayName", displayName);
             
             childAge = snapshot.val().childAge;
             parentName = parentName1.toUpperCase();
