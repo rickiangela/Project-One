@@ -94,10 +94,7 @@ window.onload = function video() {
         console.log(resp);
         // For loop to grab items and append to the page
         for (i in resp.items) {
-            div = ("<div>")
-                div.addClass("m-2")
-                div.append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
-                $(".container3").append(div);
+            $(".container3").append('<iframe width="250" height="auto" class="m-2" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
         }
     });
         
@@ -125,10 +122,7 @@ window.onload = function video() {
         restRequest2.execute(function (resp) {
             // console.log(resp);
             for (i in resp.items) {  
-                div = ("<div>")
-                div.addClass("m-2")
-                div.append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
-                $(".container3").append(div);
+                $(".container3").append('<iframe width="250" height="auto" class="m-2" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
             }
         });
     });
@@ -159,10 +153,7 @@ $("#bigSearchbtn").on("click", function (event){
         console.log(resp);
         // For loop to grab items and append to the page
         for (i in resp.items) {
-            div = ("<div>")
-               div.addClass("m-2")
-                div.append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
-                $(".container3").append(div);
+            $(".container3").append('<iframe width="250" height="auto" class="m-2" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
         }
     });
         
@@ -190,10 +181,7 @@ $("#bigSearchbtn").on("click", function (event){
         restRequest.execute(function (resp) {
             // console.log(resp);
             for (i in resp.items) {  
-                div = ("<div>")
-                div.addClass("m-2")
-                div.append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
-                $(".container3").append(div);
+                $(".container3").append('<iframe width="250" height="auto" class="m-2" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
             }
         });
     });
