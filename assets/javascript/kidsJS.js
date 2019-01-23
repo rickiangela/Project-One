@@ -30,6 +30,10 @@ firebase.auth().onAuthStateChanged(function(user) {
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(errorMessage)
+        }).then(function(){
+            firebase.database().ref("/users/" + userId).update({
+                timeLimit: "0"
+            });
         });
         
     } else {
