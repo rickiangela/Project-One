@@ -33,18 +33,24 @@ $("#updateInfo").on("click",function(event){
         user.updatePassword(password).then(function() {
             console.log("You Did It!");
         }).catch(function(error) {
-            console.log(error.message);
+            $("#signInText").text(error.message)
+            $("#myModal").modal();
         });
         $("#password").val("");
-        alert("Password has been changed.");
+        $("#passwordText").text("Your password has been changed")
+        $("#passwordModal").modal();
     };
 
     if(email != ""){
         user.updateEmail(email).then(function() {
             console.log("You Did It!");
         }).catch(function(error) {
-            console.log(error.message);
+            $("#signInText").text(error.message)
+            $("#emailText").modal();
         });
+        $("#email").val("");
+        $("#emailText").text("Your email has been changed")
+        $("#emailModal").modal();
     };
 
     if(childAge != ""){
@@ -54,8 +60,10 @@ $("#updateInfo").on("click",function(event){
             childAge: childAge
         });
         $("#childAge").val("");
-        alert("Your childs age has been changed.");
+        $("#signInText").text("Your childs age has been updated.")
+        $("#myModal").modal();
     };
+
 });
 
 $(".child-button").on("click", function(){
@@ -70,20 +78,18 @@ $(".sign-out").on("click", function(){
     firebase.auth().signOut().then(function() {
         window.location.href = "index.html";
     }).catch(function(error) {
-        alert(error.message)
-        alert("You are not signed out. Please try again.")
+        $("#signInText").text(error.message)
+        $("#myModal").modal();
     });
 }); 
 
-$(".sign-out").on("click", function(){
-    
-    
-    var user = firebase.auth().currentUser;
+// $("").on("click", function(){
+//     var user = firebase.auth().currentUser;
 
-    user.delete().then(function() {
-    // User deleted.
-    }).catch(function(error) {
-    console.log(error.message)
-    });
-}); 
+//     user.delete().then(function() {
+//     // User deleted.
+//     }).catch(function(error) {
+//     console.log(error.message)
+//     });
+// }); 
 

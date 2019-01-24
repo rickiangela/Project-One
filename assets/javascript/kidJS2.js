@@ -26,7 +26,6 @@ firebase.auth().onAuthStateChanged(function(user) {
                 startTimer()
             });
         }).catch(function(error) {
-            var errorCode = error.code;
             var errorMessage = error.message;
             console.log(errorMessage)
         }).then(function(){

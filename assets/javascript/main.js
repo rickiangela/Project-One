@@ -37,7 +37,8 @@ $("#btn1").on("click", function (event) {
                  // Handle Errors here.
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                alert(errorMessage);
+                $("#signInText").text(errorMessage)
+                $("#myModal").modal();
                 console.log(errorCode);
                 console.log(errorMessage);
         });
@@ -45,7 +46,8 @@ $("#btn1").on("click", function (event) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        alert(errorMessage);
+        $("#signInText").text(errorMessage)
+        $("#myModal").modal();
         console.log(errorCode);
         console.log(errorMessage);
     }).then(function () {
@@ -76,7 +78,8 @@ $("#newUserbtn").on("click", function (e) {
                 // Handle Errors here.
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                alert(errorMessage)
+                $("#signInText").text(errorMessage)
+                $("#myModal").modal();
                 console.log(errorCode);
                 console.log(errorMessage);
             }).then(function (userId) {
@@ -104,12 +107,14 @@ $("#newUserbtn").on("click", function (e) {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
-            alert(errorMessage)
+            $("#signInText").text(errorMessage)
+            $("#myModal").modal();
             console.log(errorCode);
             console.log(errorMessage);
         });   
     }else{
-        alert("Please fill in all fields.")
+        $("#signInText").text("Please fill in all fields, Thank You!")
+        $("#myModal").modal();
     }
 });
 

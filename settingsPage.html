@@ -55,8 +55,7 @@
               <span class="input-group-text" id="basic-addon1">Change Email</span>
             </div>
 
-            <input type="text" class="form-control change-email" id="email" placeholder="Email" aria-label="Email"
-
+            <input type="email" class="form-control change-email" id="email" placeholder="Email" aria-label="Email"
               aria-describedby="basic-addon1" />
           </div>
 
@@ -66,8 +65,7 @@
               <span class="input-group-text" id="basic-addon1">Set New Password</span>
             </div>
 
-            <input type="text" class="form-control change-password" id="password" placeholder="New Password" aria-label="Password"
-
+            <input type="password" class="form-control change-password" id="password" placeholder="New Password" aria-label="Password"
               aria-describedby="basic-addon1" />
           </div>
 
@@ -75,18 +73,73 @@
 
           <!-- Changing the child age class is change-age -->
           <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Child Age</span>
-              </div>
-              <input type="text" class="form-control change-age" id="childAge" placeholder="Child Age" aria-label="Child Age"
-                aria-describedby="basic-addon1" />
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Child Age</span>
             </div>
+            <input type="text" class="form-control change-age" id="childAge" placeholder="Child Age" aria-label="Child Age"
+              aria-describedby="basic-addon1" />
+          </div>
 
 
 
           <hr />
           <button type="button" class="btn btn-info" id="updateInfo">Save Changes</button>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="passwordModal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-body">
+                <h1 id="passwordText"></h1>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+         <!-- Modal -->
+         <div class="modal fade" id="emailModal" role="dialog">
+            <div class="modal-dialog">
+  
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h1 id="emailText"></h1>
+  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+
+           <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+  
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h1 id="signInText"></h1>
+  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+
 
         <div class="col-lg-3"></div>
       </div>
@@ -95,11 +148,14 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
   <script src="assets/javascript/settings.js"></script>
 
 </body>
