@@ -11,7 +11,7 @@ https://rickiangela.github.io/Project-One/
 * The parent can chose a time the child is allowed to use the site.  Once the time runs out it will default back to the sign-in page.  This will limit the child from getting into the parent's page and changing the settings. 
 
 <img src="assets/images/page2.png" width="800" height="400">
-<img src="assets/images/page2a.png" width="800" height="400">
+<img src="assets/images/Page2a.png" width="800" height="400">
 
 * The parents will have a section that will allow them to search for articles on parenting and have a forum for them to talk with other parents.
 * The parent section will also allow the user to edit setting.  Like changing email, password or the child's age.
@@ -31,10 +31,11 @@ https://rickiangela.github.io/Project-One/
 
 
 <h3>Technology Used</h3>
-<br>
-<li> New York Times API<li>
+<li> News API<li>
 <li> Youtube API</li>
-<li> Chat box</li>
+<li> Firebase Database </li>
+<li> Firebase Authentication </li>
+<li> Chat (powered by Firebase Database)</li>
 
 
 <h2>Developer Teams</h2>
