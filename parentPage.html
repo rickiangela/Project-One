@@ -14,8 +14,8 @@
     crossorigin="anonymous" />
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
 
   <link rel="stylesheet" text="text/css" href="assets/css/parentPage.css" />
 
@@ -53,6 +53,8 @@
     <br /><br />
 
     <div class="row">
+
+
       <div class="col-lg-7" id="articles">
 
       </div>
@@ -64,7 +66,7 @@
           <h3>Chat Box</h3>
         </div>
         <div id="chatMessage">
-          
+
         </div>
         <div id="chatBottom">
           <form action="#" onSubmit="return false;" id="chatForm">
@@ -72,9 +74,26 @@
             <input type="text" name="text" id="text" placeholder="Chat with other parents..." />
             <input type="submit" name="submit" id="chatSend" value="post" />
           </form>
-
         </div>
       </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-body">
+                <h1 id="signInText"></h1>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
     </div>
 
     <br><br><br>
@@ -86,6 +105,7 @@
   </div>
 
   <!-- JavaScript -->
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"

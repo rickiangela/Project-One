@@ -1,3 +1,5 @@
+var $j = jQuery.noConflict(true);
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyD2x5ejtvQv8l5fMdsenPXuxIMbiiWDay0",
@@ -49,7 +51,8 @@ $("#chatSend").on("click", function(e){
     var message = $("#text").val().trim();
 
     if ( message === ""){
-        alert("Please write a message!")
+        $("#signInText").text("Please write a message.")
+        $("#myModal").modal();
     }else{
         database.ref("/chat").push({
             message: message,
@@ -70,7 +73,7 @@ function openArticles(){
    
     console.log(queryURL)
 
-    $.ajax({
+    $j.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response){
@@ -120,55 +123,61 @@ openArticles()
 $("#searchEnter").on("click",function (event){
     
     event.preventDefault();
-    $("#articles").empty()
-    var search = $("#searchVal").val().trim();
-    var queryURL = "https://newsapi.org/v2/everything?q=" + search + "&apiKey=e399cee38ee9457b83fb4fa2819d53da";
+
+    if ($("#searchVal").val().trim() === "") {
+
+        $("#signInText").text("Your search is empty")
+        $("#myModal").modal();
+
+    }else{
+
+        $("#articles").empty()
+        var search = $("#searchVal").val().trim();
+        var queryURL = "https://newsapi.org/v2/everything?q=" + search + "&apiKey=e399cee38ee9457b83fb4fa2819d53da";
    
-    console.log(queryURL)
+        $j.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response){
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response){
+            console.log(response);
 
-        console.log(response);
+            var results = response.articles;
 
-        var results = response.articles;
+            for (var i=0; i< 4; i++) {
+                var author = results[i].author;
+                var description = results[i].description;
+                var fullarticle = results[i].url;
+                var title = results[i].title;
 
-        for (var i=0; i< 4; i++) {
-            var author = results[i].author;
-            var description = results[i].description;
-            var fullarticle = results[i].url;
-            var title = results[i].title;
+                var mainDiv = $("<div>").addClass("card");
 
-            var mainDiv = $("<div>").addClass("card");
+                var bodyDiv = $("<div>").addClass("card-body");
 
-            var bodyDiv = $("<div>").addClass("card-body");
+                var h3 = $("<h3>").text("Title: " + title);
+                h3.addClass("card-title");
 
-            var h3 = $("<h3>").text("Title: " + title);
-            h3.addClass("card-title");
+                var p = $("<p>").text(description);
+                p.addClass("card-text");
 
-            var p = $("<p>").text(description);
-            p.addClass("card-text");
+                var authorDiv = $("<h6>").text("Author: " + author)
 
-            var authorDiv = $("<h6>").text("Author: " + author)
+                var a = $("<a>").attr("href",fullarticle)
+                a.addClass("btn btn-primary")
+                a.text("Read Full Article")
 
-            var a = $("<a>").attr("href",fullarticle)
-            a.addClass("btn btn-primary")
-            a.text("Read Full Article")
+                bodyDiv.append(h3)
+                bodyDiv.append(p)
+                bodyDiv.append(authorDiv)
+                bodyDiv.append(a)
 
-            bodyDiv.append(h3)
-            bodyDiv.append(p)
-            bodyDiv.append(authorDiv)
-            bodyDiv.append(a)
+                mainDiv.append(bodyDiv)
 
-            mainDiv.append(bodyDiv)
+                $("#articles").prepend(mainDiv)
 
-            $("#articles").prepend(mainDiv)
-
-        };
-    });
-    
+            };
+        });
+    };
 });
 
 
