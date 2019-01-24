@@ -98,7 +98,6 @@ window.onload = function video() {
         console.log(resp);
         // For loop to grab items and append to the page
         for (i in resp.items) {
-            $(".container3").addClass("m-2")
             $(".container3").append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
         }
     });
@@ -126,8 +125,7 @@ window.onload = function video() {
         // Returns the request back and will run the same loop to append items to page
         restRequest2.execute(function (resp) {
             // console.log(resp);
-            for (i in resp.items) {  
-                $(".container3").addClass("m-2")
+            for (i in resp.items) {
                 $(".container3").append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
             }
         });
@@ -159,7 +157,6 @@ $("#bigSearchbtn").on("click", function (event){
         console.log(resp);
         // For loop to grab items and append to the page
         for (i in resp.items) {
-            $(".container3").addClass("m-2")
             $(".container3").append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
         }
     });
@@ -187,8 +184,7 @@ $("#bigSearchbtn").on("click", function (event){
         // Returns the request back and will run the same loop to append items to page
         restRequest.execute(function (resp) {
             // console.log(resp);
-            for (i in resp.items) {  
-                $(".container3").addClass("m-2")
+            for (i in resp.items) {
                 $(".container3").append('<iframe width="250" height="auto" src="//www.youtube.com/embed/' + resp.items[i].id.videoId + '" frameborder="0" allowfullscreen></iframe>');
             }
         });
