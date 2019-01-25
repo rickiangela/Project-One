@@ -9,8 +9,32 @@ body {
 
 
 
+.container{
+    margin: 0 auto;
+    padding: 20px;
+    width: 800px;
+    height: 500px;
+}
+
+#timer{
+    border: solid 1px black;
+}
+
 .container3{
     margin: 20px auto;
     width: 800px;
     height: 500px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+iframe{
+    margin: 5px;
+    width: 700px;
+    height: 425px;
+    padding-left:80px;
 }

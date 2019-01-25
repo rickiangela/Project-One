@@ -2,15 +2,31 @@ body {
     margin: 10px;
     background-color: black;
     background: url('../images/kidsBack.jpg');
-    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
+.container{
+    margin: 0 auto;
+    padding: 20px;
+    width: 800px;
+    height: 500px;
+}
 
+#timer{
+    border: solid 1px black;
+}
 
 .container2{
     margin: 20px auto;
     width: 800px;
     height: 500px;
+}
+
+iframe{
+    margin: 5px;
+    width: 700px;
+    height: 425px;
+    padding-left:80px;
 }
