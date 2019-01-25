@@ -8,7 +8,7 @@ https://rickiangela.github.io/Project-One/
 <img src="assets/images/page1.png" width="800" height="400">
 
 * Once logged in they will come to an acess page where they will see the users on their account.  
-* The parent can chose a time the child is allowed to use the site.  Once the time runs out it will default back to the sign-in page.  This will limit the child from getting into the parent's page and changing the settings. 
+* The parent can chose a time the child is allowed to use the site.  Once the time runs out it will default back to the sign in page.  This will limit the child from getting into the parent's page and changing the settings. 
 
 <img src="assets/images/page2.png" width="800" height="400">
 <img src="assets/images/Page2a.png" width="800" height="400">
@@ -30,8 +30,8 @@ https://rickiangela.github.io/Project-One/
 <img src="assets/images/page6.png" width="800" height="400">
 
 
-<h3>Technology Used</h3>
-<li> News API<li>
+<h2>Technology Used</h2>
+<li> News API</li>
 <li> Youtube API</li>
 <li> Firebase Database </li>
 <li> Firebase Authentication </li>
@@ -42,7 +42,7 @@ https://rickiangela.github.io/Project-One/
 
 <h3>Front End Team</h3>
  <li> Ricki Echevarria</li>
- <li> CJ Summers<li> 
+ <li> CJ Summers</li> 
     * Team Responsible for HTML/CSS
 
 <h3>Back End Team</h3>
